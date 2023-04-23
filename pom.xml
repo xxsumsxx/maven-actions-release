@@ -4,13 +4,13 @@
   <artifactId>my-project</artifactId>
   <packaging>jar</packaging>
   <version>1.0.1-SNAPSHOT</version>
-  <name>my-project</name>
+  <name>test</name>
   <url>http://maven.apache.org</url>
     <distributionManagement>
     <repository>
         <id>github</id>
         <name>GitHub OWNER Apache Maven Packages</name>
-        <url>https://maven.pkg.github.com/OWNER/REPOSITORY</url>
+        <url>https://maven.pkg.github.com/xxsumsxx/test</url>
     </repository>
     </distributionManagement>
   <dependencies>
