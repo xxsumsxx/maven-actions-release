@@ -3,7 +3,7 @@
   <groupId>com.example</groupId>
   <artifactId>maven-actions-release</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.45-SNAPSHOT</version>
+  <version>1.0.45</version>
   <name>maven-actions-release</name>
   <url>http://maven.apache.org</url>
   <dependencies>
@@ -18,7 +18,7 @@
     <connection>scm:git:${project.scm.url}</connection>
     <developerConnection>scm:git:${project.scm.url}</developerConnection>
     <url>git@github.com:xxsumsxx/maven-actions-release.git</url>
-    <tag>HEAD</tag>
+    <tag>maven-actions-release-1.0.45</tag>
   </scm>
 <distributionManagement>
     <repository>
