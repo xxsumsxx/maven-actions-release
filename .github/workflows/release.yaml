@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-      - master
+      - release/*
 
 jobs:
   release:
@@ -32,7 +32,10 @@ jobs:
         run: |
           mkdir -p ~/.m2
           echo "<settings><servers><server><id>github</id><username>${{ github.actor }}</username><password>${{ env.GITHUB_TOKEN }}</password></server></servers></settings>" > ~/.m2/settings.xml
-
+      - name: Configure SSH
+        uses: webfactory/ssh-agent@v0.5.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Release
         run: |
           git config --global user.email "git@github.com"
