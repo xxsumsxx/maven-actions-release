@@ -20,9 +20,9 @@ jobs:
         with:
           java-version: 11
           server-id: myserver
-          settings-path: ${{ env.MAVEN_SETTINGS }}
+          maven-args: "-Dmaven.javadoc.skip=true -DskipTests -DskipITs -Ddockerfile.skip -DdockerCompose.skip"
       - name: Build and release
-        env:
-          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+         with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
-          mvn -B release:prepare release:perform -DskipTests -Darguments="-Dgpg.passphrase='${GPG_PASSPHRASE}'"
+          mvn -B release:prepare release:perform -DskipTests
