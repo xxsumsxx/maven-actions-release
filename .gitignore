@@ -1,8 +1,6 @@
 ## gitignore para maven
 pom.xml.releaseBackup
 target/
-pom.xml.tag
-pom.xml.next
 release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
