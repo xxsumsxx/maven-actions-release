@@ -35,6 +35,7 @@ jobs:
 
       - name: Release
         run: |
-          git config --global user.email "mavenrelease@belcorp"
-          git config --global user.name "belcorp"
-          mvn -B release:prepare release:perform -DskipTests
+          git config --global user.email "git@github.com"
+          git config --global user.name "git"
+          git config --global url."git@github.com:".insteadOf "https://github.com/"
+          mvn -B clean release:prepare release:perform -DskipTests
