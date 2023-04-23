@@ -65,7 +65,7 @@ jobs:
       <password>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</password>
     </server>
   </servers>
-</settings>'''' > ~/.m2/settings.xml
+</settings>''' > ~/.m2/settings.xml
 
       - name: Release
         run: |
