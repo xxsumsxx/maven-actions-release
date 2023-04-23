@@ -21,6 +21,12 @@
     <url>git@github.com:xxsumsxx/maven-actions-release.git</url>
     <tag>HEAD</tag>
   </scm>
+<distributionManagement>
+    <repository>
+        <id>github</id>
+        <name>GitHub xxsumsxx Apache Maven Packages</name>
+        <url>https://maven.pkg.github.com/xxsumsxx/maven-actions-release</url>
+    </repository>
 <build>
 <plugins>
     <plugin>
