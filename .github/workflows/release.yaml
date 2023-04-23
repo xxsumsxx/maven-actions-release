@@ -37,6 +37,4 @@ jobs:
         run: |
           git config --global user.email "git@github.com"
           git config --global user.name "git"
-          git config --global url."git@github.com:".insteadOf "https://github.com/"
-          git config --global --list
           mvn -B clean release:prepare release:perform -DskipTests
