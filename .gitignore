@@ -1,5 +1,4 @@
 ## gitignore para maven
-pom.xml.releaseBackup
 target/
 release.properties
 dependency-reduced-pom.xml
