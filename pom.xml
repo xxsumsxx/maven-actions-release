@@ -27,6 +27,7 @@
         <name>GitHub xxsumsxx Apache Maven Packages</name>
         <url>https://maven.pkg.github.com/xxsumsxx/maven-actions-release</url>
     </repository>
+</distributionManagement>
 <build>
 <plugins>
     <plugin>
