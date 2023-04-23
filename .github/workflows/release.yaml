@@ -22,7 +22,7 @@ jobs:
           server-id: myserver
           settings-path: ${{ env.MAVEN_SETTINGS }}
       - name: Build and release
-         with:
+         env:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           mvn -B release:prepare release:perform -DskipTests
