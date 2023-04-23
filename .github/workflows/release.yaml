@@ -30,7 +30,13 @@ jobs:
       - name: Set up Maven settings.xml
         uses: s4u/maven-settings-action@v2.8.0
         with:
-          servers: '[{"id": "github", "username": "${{GITHUB_ACTOR}}", "password": "{{GITHUB_TOKEN}}"}]'
+          settings-xml: ${{ github.workspace }}/settings.xml
+          servers: |
+            <server>
+              <id>github</id>
+              <username>${{ github.actor }}</username>
+              <password>${{ secrets.GITHUB_TOKEN }}</password>
+            </server>
       - name: Release
         run: |
           git config --global user.email "git@github.com"
