@@ -21,8 +21,9 @@ jobs:
           java-version: 11
           server-id: myserver
           settings-path: ${{ env.MAVEN_SETTINGS }}
-      - name: Build and release
-         env:
+      - name: Release
+        uses: qcastel/github-actions-maven-release@COMMIT_HASH
+        with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
           mvn -B release:prepare release:perform -DskipTests
