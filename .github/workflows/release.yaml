@@ -20,7 +20,7 @@ jobs:
         with:
           java-version: 11
           server-id: myserver
-          maven-args: "-Dmaven.javadoc.skip=true -DskipTests -DskipITs -Ddockerfile.skip -DdockerCompose.skip"
+          settings-path: ${{ env.MAVEN_SETTINGS }}
       - name: Build and release
          with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
