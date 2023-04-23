@@ -25,5 +25,3 @@ jobs:
         uses: qcastel/github-actions-maven-release@COMMIT_HASH
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-        run: |
-          mvn -B release:prepare release:perform -DskipTests
