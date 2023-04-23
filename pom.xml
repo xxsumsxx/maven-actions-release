@@ -36,7 +36,6 @@
         <configuration>
           <scmCommentPrefix>[ci skip]</scmCommentPrefix>
           <autoVersionSubmodules>true</autoVersionSubmodules>
-          <releaseProfiles>github</releaseProfiles>
         </configuration>
       </plugin>
     <plugin>
