@@ -3,7 +3,7 @@
   <groupId>com.example</groupId>
   <artifactId>maven-actions-release</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.20-SNAPSHOT</version>
+  <version>1.0.25-SNAPSHOT</version>
   <name>maven-actions-release</name>
   <url>http://maven.apache.org</url>
   <dependencies>
@@ -34,6 +34,7 @@
         <artifactId>maven-release-plugin</artifactId>
         <version>3.0.0-M1</version>
         <configuration>
+          <scmCommentPrefix>[ci skip]</scmCommentPrefix>
           <tagNameFormat>v@{project.version}</tagNameFormat>
           <autoVersionSubmodules>true</autoVersionSubmodules>
           <releaseProfiles>release</releaseProfiles>
