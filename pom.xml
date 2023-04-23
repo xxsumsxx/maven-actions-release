@@ -3,7 +3,7 @@
   <groupId>com.example</groupId>
   <artifactId>maven-actions-release</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.13-SNAPSHOT</version>
+  <version>1.0.20-SNAPSHOT</version>
   <name>maven-actions-release</name>
   <url>http://maven.apache.org</url>
   <dependencies>
@@ -29,6 +29,23 @@
 </distributionManagement>
 <build>
 <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>3.0.0-M1</version>
+        <configuration>
+          <tagNameFormat>v@{project.version}</tagNameFormat>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+          <releaseProfiles>release</releaseProfiles>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>org.apache.maven.scm</groupId>
+            <artifactId>maven-scm-provider-gitexe</artifactId>
+            <version>1.11.2</version>
+          </dependency>
+        </dependencies>
+      </plugin>
     <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
