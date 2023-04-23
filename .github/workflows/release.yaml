@@ -26,6 +26,15 @@ jobs:
           java-version: 11
           server-id: myserver
           settings-path: ${{ env.MAVEN_SETTINGS }}
+      - name: Set up Maven settings.xml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p ~/.m2
+          echo "<settings><servers><server><id>github</id><username>${{ github.actor }}</username><password>${{ env.GITHUB_TOKEN }}</password></server></servers></settings>" > ~/.m2/settings.xml
+
       - name: Release
         run: |
+          git config --global user.email "mavenrelease@belcorp"
+          git config --global user.name "belcorp"
           mvn -B release:prepare release:perform -DskipTests
