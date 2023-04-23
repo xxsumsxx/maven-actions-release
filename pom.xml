@@ -37,7 +37,6 @@
           <scmCommentPrefix>[ci skip]</scmCommentPrefix>
           <tagNameFormat>v@{project.version}</tagNameFormat>
           <autoVersionSubmodules>true</autoVersionSubmodules>
-          <releaseProfiles>github</releaseProfiles>
         </configuration>
         <dependencies>
           <dependency>
@@ -60,7 +59,6 @@
         <artifactId>maven-jar-plugin</artifactId>
         <version>3.2.0</version>
         <configuration>
-            <scmCommentPrefix>[ci skip]</scmCommentPrefix>
             <archive>
                 <manifest>
                     <addClasspath>true</addClasspath>
