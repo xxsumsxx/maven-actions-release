@@ -37,7 +37,7 @@
           <scmCommentPrefix>[ci skip]</scmCommentPrefix>
           <tagNameFormat>v@{project.version}</tagNameFormat>
           <autoVersionSubmodules>true</autoVersionSubmodules>
-          <releaseProfiles>release</releaseProfiles>
+          <releaseProfiles>github</releaseProfiles>
         </configuration>
         <dependencies>
           <dependency>
