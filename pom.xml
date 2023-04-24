@@ -3,7 +3,7 @@
   <groupId>com.example</groupId>
   <artifactId>maven-actions-release</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.56-SNAPSHOT</version>
+  <version>1.0.61-SNAPSHOT</version>
   <name>maven-actions-release</name>
   <url>http://maven.apache.org</url>
   <dependencies>
