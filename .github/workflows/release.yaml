@@ -38,9 +38,9 @@ jobs:
           git config --global url."git@github.com:".insteadOf "https://github.com/"
           mvn -B clean release:prepare release:perform -DskipTests
       - name: Print Release Version
-        run: echo "Release version is ${{ env.release_version }}"
+        run: echo "Release version is $GITHUB_REF_NAM"
       - name: Merge Release to Master
         run: |
           git fetch origin main
-          git checkout main && git merge --no-ff origin/release/$GITHUB_REF_NAME -m "Merge release ${{ env.release_version }} into master"
+          git checkout main && git merge --no-ff origin/$GITHUB_REF_NAME -m "Merge release ${{ env.release_version }} into master"
           git push origin master  
