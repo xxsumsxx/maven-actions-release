@@ -27,6 +27,8 @@ jobs:
           java-version: 11
           server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
           settings-path: ${{ github.workspace }} # location for the settings.xml file
+      - name: view files in workspace
+        run: ls -R
       - name: view settings.xml
         run: cat settings.xml
       - name: 💾 Publish package 🔨
