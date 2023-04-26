@@ -30,7 +30,7 @@ jobs:
       - name: view settings.xml
         run: cat ${{ github.workspace }}/settings.xml
       - name: 💾 Publish package 🔨
-        run: mvn --batch-mode -s ${{ github.workspace }}/settings.xml deploy -Dserver.github.username=${{ github.actor  }} -Dserver.github.password=${{ secrets.ENV_GITHUB_TOKEN }} -Dmaven.test.skip=true
+        run: mvn --batch-mode -s settings.xml deploy -Dserver.github.username=${{ github.actor  }} -Dserver.github.password=${{ secrets.ENV_GITHUB_TOKEN }} -Dmaven.test.skip=true
       # - name: Set up Maven settings.xml
       #   uses: s4u/maven-settings-action@v2.8.0
       #   with:
